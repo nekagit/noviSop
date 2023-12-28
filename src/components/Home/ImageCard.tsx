@@ -1,10 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
 import SchoolBackground from "../assets/school0.jpg";
 
-function Home() {
-  // const springStyles = useSpring(
-  //   SpringLib({ visible: true }).containerAnimation.opacity
-  // );
+function ImageCard() {
   const imgSpring = useSpring({
     transform: "scaleX(0.90)",
     padding: "1vh",
@@ -16,7 +13,6 @@ function Home() {
       transform: "scaleX(0.88)",
     },
   });
-
   return (
     <>
       <animated.div className="imagesHover" style={{ ...imgSpring }}>
@@ -32,21 +28,7 @@ function Home() {
           alt="SchoolBackground"
         />
       </animated.div>
-      {/* 
-      <animated.div className="imagesHover" style={{ ...imgSpring }}>
-        <img
-          style={{
-            height: "50vh",
-            width: "auto",
-            margin: "auto",
-            objectFit: "contain",
-            transformOrigin: "bottom",
-          }}
-          src={SportBackground}
-          alt="SportBackground"
-        />
-      </animated.div> */}
     </>
   );
 }
-export default Home;
+export default ImageCard;
