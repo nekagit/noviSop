@@ -1,13 +1,16 @@
 import { ICard } from "../../pages/Home";
-import ImageCard from "./ImageCard";
+import HomeCard from "./HomeCard";
 import WelcomeJumboTron from "./WelcomeJumboTron";
 
 export default function CardHolder(props: Readonly<ICard>) {
-  const { backgroundSrc, title, color, top } = props;
+  const {  title, color, top } = props;
   return (
-    <div className="cardHolder" style={{ backgroundColor: color, top: top, left: "15%" }}>
+    <div
+      className="cardHolder"
+      style={{ backgroundColor: color, top: top, left: "15%" }}
+    >
       <WelcomeJumboTron title={title} />
-      <ImageCard src={backgroundSrc} />
+      <HomeCard/>
     </div>
   );
 }

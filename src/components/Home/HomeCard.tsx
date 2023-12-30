@@ -1,9 +1,7 @@
 import { Controller, animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
-import { IImageCard } from "../../pages/Home";
 
-function ImageCard(props: Readonly<IImageCard>) {
-  const { src } = props;
+function HomeCard() {
   const [isShowing, setIsShowing] = useState(false);
   const animations = new Controller({ opacity: 0 });
 
@@ -20,17 +18,6 @@ function ImageCard(props: Readonly<IImageCard>) {
     },
   });
 
-  const imgSpring = useSpring({
-    border: "1px solid white",
-    opacity: "1%",
-    marginBottom: "3vh",
-    config: { duration: 500 },
-    from: {
-      opacity: "100%",
-      border: "1px solid black",
-    },
-  });
-
   return (
     <>
       <animated.div
@@ -38,13 +25,8 @@ function ImageCard(props: Readonly<IImageCard>) {
         className="borderDiv"
         onMouseEnter={handleOnEnter}
       />
-      <animated.img
-        className="imageCard"
-        src={src}
-        alt={src}
-        style={{ ...imgSpring }}
-      />
+      <animated.div className="HomeCard" />
     </>
   );
 }
-export default ImageCard;
+export default HomeCard;

@@ -1,4 +1,3 @@
-import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./Root";
 import AboutUs from "./pages/AboutUs";
@@ -17,11 +16,35 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/aboutUs",
+          path: "/school",
           element: <AboutUs />,
         },
         {
-          path: "/course",
+          path: "/sport",
+          element: <Course />,
+        },
+        {
+          path: "/sport/gallery",
+          element: <Course />,
+        },
+        {
+          path: "/sport/news",
+          element: <Course />,
+        },
+        {
+          path: "/sport/sportDays",
+          element: <Course />,
+        },
+        {
+          path: "/school/gallery",
+          element: <Course />,
+        },
+        {
+          path: "/school/news",
+          element: <Course />,
+        },
+        {
+          path: "/school/course",
           element: <Course />,
         },
         {
@@ -32,9 +55,9 @@ function App() {
     },
   ]);
   return (
-    <main>
+    <div>
       <RouterProvider router={router} />
-    </main>
+    </div>
   );
 }
 

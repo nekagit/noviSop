@@ -12,9 +12,7 @@ export interface IJumboTron {
   title: string;
 }
 
-export interface IImageCard {
-  src: string;
-}
+export interface IHomeCard {}
 function Home() {
   const allCards: ICard[] = [
     {
