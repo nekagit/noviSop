@@ -5,7 +5,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(68,68,69);
+  background-color: rgb(65, 59, 143);
 }
 
 main {
@@ -22,10 +22,31 @@ nav {
   z-index: 999;
 }
 
+.imageCard {
+    width: "fit-content";
+    margin:auto;
+    border: 3px solid white;
+    object-fit: "cover";
+    transform-origin: "top";
+}
+
+.imagesHover {
+  padding: 5vh 3vh 5vh 3vh;
+border: 1px solid black;
+height: fit-content;
+width: fit-content;
+}
+
 .imagesHover:hover {
-  border-left: 0.5px solid black;
-  border-right: 0.5px solid black;
-  border-bottom: 0.5px solid black;
+  border-left: 0.5px solid white;
+  border-right: 0.5px solid white;
   transition: all 1s;
-  opacity: 50%;
+}
+
+/* .jumboWrapper {
+  border: 1px solid white;
+} */
+
+.jumboText:hover {
+  color: white
 }
