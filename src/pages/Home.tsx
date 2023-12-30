@@ -1,6 +1,5 @@
 import School from "../assets/school0.jpg";
 import Sport from "../assets/sport0.jpg";
-import WelcomeJumboTron from "../components/Home/WelcomeJumboTron";
 export interface ICard {
   title: string;
   backgroundSrc: string;
@@ -29,9 +28,7 @@ function Home() {
     },
   ];
   return (
-    <div>
-      <WelcomeJumboTron title="Stichting SOP Rotterdam" />
-    </div>
+    <div>{/* <WelcomeJumboTron title="Stichting SOP Rotterdam" /> */}</div>
   );
 }
 export default Home;

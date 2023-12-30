@@ -4,50 +4,59 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgb(62, 75, 140);
-  background: radial-gradient(circle, rgb(62, 75, 140) 0%, rgb(23, 29, 75) 26%);
-  animation: gradient 3s ease infinite;
-  background-repeat: no-repeat;
-}
-
-@keyframes gradient {
-  0% {
-    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 12%);
-  }
-  10% {
-    background: radial-gradient(circle, rgb(108, 122, 189) 0%, rgb(23, 29, 75) 26%);
-  }
-  20% {
-    background: radial-gradient(circle, rgb(118, 132, 204) 0%, rgb(23, 29, 75) 33%);
-  }
-  30% {
-    background: radial-gradient(circle, rgb(140, 153, 221) 0%, rgb(23, 29, 75) 42%);
-  }
-  40% {
-    background: radial-gradient(circle, rgb(146, 158, 221) 0%, rgb(23, 29, 75) 55%);
-  }
-  50% {
-    background: radial-gradient(circle, rgb(130, 143, 207) 0%, rgb(23, 29, 75) 42%);
-  }
-  60% {
-    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 33%);
-  }
-  70% {
-    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 26%);
-  }
-  80% {
-    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 12%);
-  }
-  90% {
-    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 5%);
-  }
-  100% {
-    background: radial-gradient(circle, rgb(150, 162, 221) 0%, rgb(23, 29, 75) 15%);
-  }
-}
-main {
   height: 100vh;
   width: 100vw;
+  background: linear-gradient(215deg, #414fc1, #266c74, #000000, #000000);
+  background-size: 800% 800%;
+  animation: backgroundAni 15s ease infinite;
+}
+@keyframes backgroundAni {
+  0% {
+    background-position: 53% 0%;
+  }
+  50% {
+    background-position: 48% 100%;
+  }
+  100% {
+    background-position: 53% 0%;
+  }
+}
+.homeLogo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 21%;
+  left: 21%;
+  animation: homeLogoAni 33s ease infinite;
+}
+
+@keyframes homeLogoAni {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.srbMinistar {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+main {
   overflow: hidden;
 }
 
@@ -57,9 +66,21 @@ nav {
   font-size: "8pt";
   font-family: "courier";
   z-index: 999;
-  border-top: 1px solid black;
+  border-top: 3px solid white;
+  animation: navAni 15s ease infinite;
 }
 
+@keyframes navAni {
+  0% {
+    border-top: 3px solid red;
+  }
+  50% {
+    border-top: 3px solid white;
+  }
+  100% {
+    border-top: 3px solid black;
+  }
+}
 .cardHolder {
   position: absolute;
   top: 0;
