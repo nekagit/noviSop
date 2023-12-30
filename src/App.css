@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(59, 54, 70);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+nav {
+  position: absolute;
+  right: 0;
+  font-size: "8pt";
+  font-family: "courier";
+  z-index: 999;
+}
+
+.cardHolder {
+  position: absolute;
+  top: 0;
+  width: 70vw;
+  height: auto;
+}
+
+.imageCard {
+  margin: auto;
+  -o-object-fit: "cover";
+     object-fit: "cover";
+  transform-origin: "top";
+}
+
+.borderDiv {
+  height: auto;
+  width: 100%;
+  margin-bottom: 3vh;
+  border-top: 11px solid black;
+}
+
+.jumboWrapper {
+  border-left: 7px solid rgb(0, 0, 0);
+  border-right: 7px solid rgb(0, 0, 0);
+}
+
+.jumboText:hover {
+  color: white;
+}/*# sourceMappingURL=App.css.map */

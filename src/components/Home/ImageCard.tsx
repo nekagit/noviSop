@@ -2,7 +2,7 @@ import { Controller, animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
 import { IImageCard } from "../../pages/Home";
 
-function ImageCard(props: IImageCard) {
+function ImageCard(props: Readonly<IImageCard>) {
   const { src } = props;
   const [isShowing, setIsShowing] = useState(false);
   const animations = new Controller({ opacity: 0 });
@@ -12,23 +12,39 @@ function ImageCard(props: IImageCard) {
     setIsShowing(!isShowing);
   };
 
-  const imgSpring = useSpring({
+  const divImgSpring = useSpring({
     transform: "scaleX(0.90)",
-    opacity: "100%",
-    config: { duration: 500 },
+    config: { duration: 2000 },
     from: {
-      opacity: "33%",
-      transform: "scaleX(0.88)",
+      transform: "scaleX(0.85)",
     },
   });
+
+  const imgSpring = useSpring({
+    border: "1px solid white",
+    opacity: "1%",
+    marginBottom: "3vh",
+    config: { duration: 500 },
+    from: {
+      opacity: "100%",
+      border: "1px solid black",
+    },
+  });
+
   return (
-    <animated.div
-      className="imagesHover"
-      style={{ ...imgSpring }}
-      onMouseEnter={handleOnEnter}
-    >
-      <img className="imageCard box" src={src} alt={src} />
-    </animated.div>
+    <>
+      <animated.div
+        style={{ ...divImgSpring }}
+        className="borderDiv"
+        onMouseEnter={handleOnEnter}
+      />
+      <animated.img
+        className="imageCard"
+        src={src}
+        alt={src}
+        style={{ ...imgSpring }}
+      />
+    </>
   );
 }
 export default ImageCard;
