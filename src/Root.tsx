@@ -7,9 +7,7 @@ function Root() {
       <nav>
         <NavBar />
       </nav>
-      <main>
         <Outlet />
-      </main>
     </>
   );
 }

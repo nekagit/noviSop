@@ -1,8 +1,9 @@
 import { Controller, animated, useSpring } from "@react-spring/web";
 import { useState } from "react";
-import SchoolBackground from "../../assets/tesla1.jpg";
+import { IImageCard } from "../../pages/Home";
 
-function ImageCard() {
+function ImageCard(props: IImageCard) {
+  const { src } = props;
   const [isShowing, setIsShowing] = useState(false);
   const animations = new Controller({ opacity: 0 });
 
@@ -26,11 +27,7 @@ function ImageCard() {
       style={{ ...imgSpring }}
       onMouseEnter={handleOnEnter}
     >
-      <img
-        className="imageCard"
-        src={SchoolBackground}
-        alt="SchoolBackground"
-      />
+      <img className="imageCard box" src={src} alt={src} />
     </animated.div>
   );
 }
