@@ -22,7 +22,7 @@ function HomeCard() {
     <>
       <animated.div
         style={{ ...divImgSpring }}
-        className="borderDiv"
+        className="borderDiv rounded"
         onMouseEnter={handleOnEnter}
       />
       <animated.div className="HomeCard" />

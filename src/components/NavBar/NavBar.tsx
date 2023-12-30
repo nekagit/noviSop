@@ -35,6 +35,7 @@ function NavBar() {
             color: !visible ? "white" : "rgb(68,68,69)",
             background: !visible ? "rgb(60,60,60)" : "white",
             transition: "3s background",
+            opacity: !visible ? 0 : 1,
           }}
           onMouseEnter={() => setVisible(true)}
           onMouseLeave={() => setVisible(false)}

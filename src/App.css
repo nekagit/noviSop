@@ -4,9 +4,47 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(59, 54, 70);
+  background: rgb(62, 75, 140);
+  background: radial-gradient(circle, rgb(62, 75, 140) 0%, rgb(23, 29, 75) 26%);
+  animation: gradient 3s ease infinite;
+  background-repeat: no-repeat;
 }
 
+@keyframes gradient {
+  0% {
+    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 12%);
+  }
+  10% {
+    background: radial-gradient(circle, rgb(108, 122, 189) 0%, rgb(23, 29, 75) 26%);
+  }
+  20% {
+    background: radial-gradient(circle, rgb(118, 132, 204) 0%, rgb(23, 29, 75) 33%);
+  }
+  30% {
+    background: radial-gradient(circle, rgb(140, 153, 221) 0%, rgb(23, 29, 75) 42%);
+  }
+  40% {
+    background: radial-gradient(circle, rgb(146, 158, 221) 0%, rgb(23, 29, 75) 55%);
+  }
+  50% {
+    background: radial-gradient(circle, rgb(130, 143, 207) 0%, rgb(23, 29, 75) 42%);
+  }
+  60% {
+    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 33%);
+  }
+  70% {
+    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 26%);
+  }
+  80% {
+    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 12%);
+  }
+  90% {
+    background: radial-gradient(circle, rgb(91, 105, 175) 0%, rgb(23, 29, 75) 5%);
+  }
+  100% {
+    background: radial-gradient(circle, rgb(150, 162, 221) 0%, rgb(23, 29, 75) 15%);
+  }
+}
 main {
   height: 100vh;
   width: 100vw;
@@ -19,6 +57,7 @@ nav {
   font-size: "8pt";
   font-family: "courier";
   z-index: 999;
+  border-top: 1px solid black;
 }
 
 .cardHolder {
@@ -26,6 +65,8 @@ nav {
   top: 0;
   width: 70vw;
   height: auto;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
 }
 
 .homeCard {
@@ -37,7 +78,8 @@ nav {
 
 .borderDiv {
   height: auto;
-  width: 100%;
+  width: 93%;
+  margin: auto;
   margin-bottom: 3vh;
   border-top: 11px solid black;
 }

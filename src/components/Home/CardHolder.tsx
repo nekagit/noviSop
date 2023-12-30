@@ -7,7 +7,7 @@ export default function CardHolder(props: Readonly<ICard>) {
   return (
     <div
       className="cardHolder"
-      style={{ backgroundColor: color, top: top, left: "15%" }}
+      style={{ backgroundColor: color, top: top, left: "15%", width: "25vw"}}
     >
       <WelcomeJumboTron title={title} />
       <HomeCard/>

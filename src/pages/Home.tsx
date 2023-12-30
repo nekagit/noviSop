@@ -1,6 +1,6 @@
 import School from "../assets/school0.jpg";
 import Sport from "../assets/sport0.jpg";
-import CardHolder from "../components/Home/CardHolder";
+import WelcomeJumboTron from "../components/Home/WelcomeJumboTron";
 export interface ICard {
   title: string;
   backgroundSrc: string;
@@ -29,19 +29,9 @@ function Home() {
     },
   ];
   return (
-    <section>
-      <div>
-        {allCards.map((x, i) => (
-          <CardHolder
-            key={x.title}
-            title={x.title}
-            backgroundSrc={x.backgroundSrc}
-            color={x.color}
-            top={i * 42 + 50 + "px"}
-          />
-        ))}
-      </div>
-    </section>
+    <div>
+      <WelcomeJumboTron title="Stichting SOP Rotterdam" />
+    </div>
   );
 }
 export default Home;
