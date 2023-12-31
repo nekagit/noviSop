@@ -48,11 +48,11 @@ nav {
 
 .outletCard {
   border: 1px solid white;
-  width: 33vw;
+  width: clamp(303px, 49%, 1px);
   height: 80vh;
   position: absolute;
   top: 9%;
-  left: 55%;
+  left: clamp(14%, 45%, 1px);
 }
 @keyframes backgroundAni {
   0% {
