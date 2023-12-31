@@ -5,13 +5,11 @@ import NavBarContent from "./NavBarContent";
 import SocialMediaContent from "./SocialMediaContent";
 
 const navigation = [
-  { name: "Willkommen", href: "/", current: false, isNav: true },
-  { name: "AboutUs", href: "/aboutUs", current: false, isNav: true },
-  { name: "Kurse", href: "/course", current: false, isNav: true },
-  { name: "Kontakt", href: "/contact", current: false, isNav: true },
-  { name: "E-Mail", href: "/email", current: false, isNav: false },
-  { name: "Instagram", href: "/social", current: false, isNav: false },
-  { name: "WhatsApp", href: "/social", current: false, isNav: false },
+  { name: "Vesti", href: "/", current: false, isNav: true },
+  { name: "Sport", href: "/aboutUs", current: false, isNav: true },
+  { name: "Skola", href: "/course", current: false, isNav: true },
+  { name: "Galerija", href: "/contact", current: false, isNav: true },
+  { name: "Kontakt", href: "/email", current: false, isNav: false },
 ];
 
 function NavBar() {

@@ -10,6 +10,50 @@ body {
   background-size: 800% 800%;
   animation: backgroundAni 15s ease infinite;
 }
+
+main {
+  overflow: hidden;
+}
+
+nav {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 10%;
+  font-size: "8pt";
+  font-family: "courier";
+  z-index: 999;
+  border-top: 3px solid white;
+  white-space: nowrap;
+  animation: navAni 15s ease infinite;
+}
+
+.homeLogo {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 21%;
+  left: 16%;
+  animation: homeLogoAni 33s ease infinite;
+}
+
+.srbMinistar {
+  max-width: 50px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 1%;
+  left: 1%;
+}
+
+.outletCard {
+  border: 1px solid white;
+  width: 33vw;
+  height: 80vh;
+  position: absolute;
+  top: 9%;
+  left: 55%;
+}
 @keyframes backgroundAni {
   0% {
     background-position: 53% 0%;
@@ -21,15 +65,6 @@ body {
     background-position: 53% 0%;
   }
 }
-.homeLogo {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 21%;
-  left: 21%;
-  animation: homeLogoAni 33s ease infinite;
-}
-
 @keyframes homeLogoAni {
   0% {
     transform: rotate(0deg);
@@ -47,29 +82,6 @@ body {
     transform: rotate(0deg);
   }
 }
-.srbMinistar {
-  max-width: 50px;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 1%;
-  left: 1%;
-}
-
-main {
-  overflow: hidden;
-}
-
-nav {
-  position: absolute;
-  right: 0;
-  font-size: "8pt";
-  font-family: "courier";
-  z-index: 999;
-  border-top: 3px solid white;
-  animation: navAni 15s ease infinite;
-}
-
 @keyframes navAni {
   0% {
     border-top: 3px solid red;
@@ -80,36 +92,4 @@ nav {
   100% {
     border-top: 3px solid black;
   }
-}
-.cardHolder {
-  position: absolute;
-  top: 0;
-  width: 70vw;
-  height: auto;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
-  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
-}
-
-.homeCard {
-  margin: auto;
-  -o-object-fit: "cover";
-     object-fit: "cover";
-  transform-origin: "top";
-}
-
-.borderDiv {
-  height: auto;
-  width: 93%;
-  margin: auto;
-  margin-bottom: 3vh;
-  border-top: 11px solid black;
-}
-
-.jumboWrapper {
-  border-left: 7px solid rgb(0, 0, 0);
-  border-right: 7px solid rgb(0, 0, 0);
-}
-
-.jumboText:hover {
-  color: white;
 }/*# sourceMappingURL=App.css.map */
