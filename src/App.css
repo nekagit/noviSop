@@ -19,7 +19,7 @@ nav {
   position: absolute;
   width: -moz-fit-content;
   width: fit-content;
-  left: 10%;
+  left: clamp(33px, 2%, 3%);
   font-size: "8pt";
   font-family: "courier";
   z-index: 999;
@@ -33,12 +33,13 @@ nav {
   height: auto;
   position: absolute;
   top: 21%;
-  left: 16%;
+  left: 5%;
   animation: homeLogoAni 33s ease infinite;
 }
 
 .srbMinistar {
-  max-width: 50px;
+  max-width: clamp(30px, 90px, 1px);
+  opacity: 0.2;
   width: 100%;
   height: auto;
   position: absolute;
@@ -47,13 +48,36 @@ nav {
 }
 
 .outletCard {
-  border: 1px solid white;
-  width: clamp(303px, 49%, 1px);
-  height: 80vh;
   position: absolute;
+  left: 5%;
   top: 9%;
-  left: clamp(14%, 45%, 1px);
+  border: 1px solid white;
+  width: clamp(303px, 55%, 60%);
+  height: 80vh;
 }
+
+
+/* Media query for iPhone */
+@media only screen and (max-width: 767px) {
+  .outletCard {
+    left: 13%;
+  }
+}
+
+/* Media query for tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .outletCard {
+    left: 29%;
+  }
+}
+
+/* Media query for PC */
+@media only screen and (min-width: 1024px) {
+  .outletCard {
+    left: 39%;
+  }
+}
+
 @keyframes backgroundAni {
   0% {
     background-position: 53% 0%;
