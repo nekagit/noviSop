@@ -22,11 +22,11 @@ function App() {
           element: <Sport />,
         },
         {
-          path: "/sport/gallery",
+          path: "/gallery",
           element: <Gallery />,
         },
         {
-          path: "/sport/news",
+          path: "/news",
           element: <News />,
         },
         {

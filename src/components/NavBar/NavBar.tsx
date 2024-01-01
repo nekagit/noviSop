@@ -5,11 +5,12 @@ import NavBarContent from "./NavBarContent";
 import SocialMediaContent from "./SocialMediaContent";
 
 const navigation = [
-  { name: "Vesti", href: "/", current: false, isNav: true },
-  { name: "Sport", href: "/aboutUs", current: false, isNav: true },
-  { name: "Skola", href: "/course", current: false, isNav: true },
-  { name: "Galerija", href: "/contact", current: false, isNav: true },
-  { name: "Kontakt", href: "/email", current: false, isNav: false },
+  { name: "Vesti", href: "/news", current: false, isNav: true },
+  { name: "Sport", href: "/sport", current: false, isNav: true },
+  { name: "Skola", href: "/school", current: false, isNav: true },
+  { name: "Galerija", href: "/gallery", current: false, isNav: true },
+  { name: "Kontakt", href: "/contact", current: false, isNav: false },
+  { name: "Sportski Dani", href: "/sport/sportDays", current: false, isNav: false}
 ];
 
 function NavBar() {

@@ -54,8 +54,12 @@ nav {
   border: 1px solid white;
   width: clamp(303px, 55%, 60%);
   height: 80vh;
+  color: white;
 }
 
+.cardHolder {
+  width: 100%;
+}
 
 /* Media query for iPhone */
 @media only screen and (max-width: 767px) {

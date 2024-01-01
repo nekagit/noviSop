@@ -16,20 +16,6 @@ export interface IJumboTron {
 
 export interface IHomeCard {}
 function Home() {
-  // const allCards: ICard[] = [
-  //   {
-  //     title: "School",
-  //     backgroundSrc: School,
-  //     color: "red",
-  //     top: "",
-  //   },
-  //   {
-  //     title: "Sport",
-  //     backgroundSrc: Sport,
-  //     color: "brown",
-  //     top: "",
-  //   },
-  // ];
   return (
     <main>
       <div className="srbMinistar">
