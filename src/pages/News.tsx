@@ -20,11 +20,11 @@ function News() {
       color: "brown",
       top: "",
     },
-    { title: "Kros RTS", backgroundSrc: KrosRTS, color: "blue", top: "" },
-    { title: "Pregled godina", backgroundSrc: KrosRTS, color: "yellow", top: "" },
+    { title: "Skola", backgroundSrc: KrosRTS, color: "blue", top: "" },
+    { title: "Pregledi godina", backgroundSrc: KrosRTS, color: "yellow", top: "" },
   ];
   return (
-    <>
+    <div className="cardHolderWrapper">
       {allCards.map((x) => (
         <CardHolder
           key={x.title}
@@ -34,7 +34,7 @@ function News() {
           top={x.top}
         />
       ))}
-    </>
+    </div>
   );
 }
 export default News;

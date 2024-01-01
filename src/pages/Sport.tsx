@@ -1,4 +1,3 @@
-import Sponsori from "../assets/school0.jpg";
 import {
   default as KrosRTS,
   default as SrpOmlPrRotterdam,
@@ -9,18 +8,14 @@ import { ICard } from "./Home";
 function Sport() {
   const allCards: ICard[] = [
     {
-      title: "Sponsori",
-      backgroundSrc: Sponsori,
-      color: "red",
-      top: "",
-    },
-    {
       title: "Srpsko Omladinsko Prijateljstvo Rotterdam",
       backgroundSrc: SrpOmlPrRotterdam,
       color: "brown",
       top: "",
     },
     { title: "Kros RTS", backgroundSrc: KrosRTS, color: "blue", top: "" },
+    { title: "Sportevi", backgroundSrc: KrosRTS, color: "white", top: "" },
+    { title: "Sportski dani", backgroundSrc: KrosRTS, color: "white", top: "" },
     {
       title: "Pregled godina",
       backgroundSrc: KrosRTS,

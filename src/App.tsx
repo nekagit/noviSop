@@ -26,7 +26,7 @@ function App() {
           element: <Gallery />,
         },
         {
-          path: "/news",
+          path: "/index",
           element: <News />,
         },
         {

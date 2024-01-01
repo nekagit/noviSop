@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   margin: 0;
   padding: 0;
@@ -38,18 +39,17 @@ nav {
 }
 
 .srbMinistar {
-  max-width: clamp(30px, 90px, 1px);
+  max-width: clamp(40px, 90px, 1px);
   opacity: 0.2;
   width: 100%;
   height: auto;
   position: absolute;
   top: 1%;
-  left: 1%;
+  left: 3%;
 }
 
 .outletCard {
   position: absolute;
-  left: 5%;
   top: 9%;
   border: 1px solid white;
   width: clamp(303px, 55%, 60%);
@@ -57,14 +57,21 @@ nav {
   color: white;
 }
 
+.cardHolderWrapper {
+  display:flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .cardHolder {
-  width: 100%;
+  padding: 1vh
 }
 
 /* Media query for iPhone */
 @media only screen and (max-width: 767px) {
   .outletCard {
-    left: 13%;
+    left: 15%;
   }
 }
 

@@ -5,7 +5,7 @@ import NavBarContent from "./NavBarContent";
 import SocialMediaContent from "./SocialMediaContent";
 
 const navigation = [
-  { name: "Vesti", href: "/news", current: false, isNav: true },
+  { name: "Glavna", href: "/index", current: false, isNav: true },
   { name: "Sport", href: "/sport", current: false, isNav: true },
   { name: "Skola", href: "/school", current: false, isNav: true },
   { name: "Galerija", href: "/gallery", current: false, isNav: true },
