@@ -4,7 +4,6 @@ export default function OutletCard () {
      
     return (
       <section className="outletCard">
-        asdf
         <Outlet />
       </section>
     );

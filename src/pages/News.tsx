@@ -1,8 +1,8 @@
-function Course() {
+function News() {
   return (
     <section>
       <h1>asdfasdfasdfadsf</h1>
     </section>
   );
 }
-export default Course;
+export default News;

@@ -1,4 +1,4 @@
-function AboutUs() {
+function Gallery() {
   return (
     <section>
       <h1>Robin Schröder</h1>
@@ -31,4 +31,4 @@ function AboutUs() {
     </section>
   );
 }
-export default AboutUs;
+export default Gallery;

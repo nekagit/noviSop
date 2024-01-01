@@ -32,13 +32,6 @@ function Home() {
   // ];
   return (
     <main>
-      <div className="homeLogo">
-        <img
-          src={SOP}
-          className="h-auto max-w-full hover:animate-pulse"
-          alt="Stichting SOP Rotterdam"
-        />
-      </div>
       <div className="srbMinistar">
         <img
           src={SRBMinistar}
@@ -53,6 +46,13 @@ function Home() {
       <nav>
         <NavBar />
       </nav>
+      <div className="homeLogo">
+        <img
+          src={SOP}
+          className="h-auto max-w-full hover:animate-pulse"
+          alt="Stichting SOP Rotterdam"
+        />
+      </div>
       <OutletCard />
     </main>
   );

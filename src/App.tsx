@@ -1,9 +1,11 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Root from "./Root";
-import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Course from "./pages/Course";
+import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
+import News from "./pages/News";
+import School from "./pages/School";
+import Sport from "./pages/Sport";
+import SportDays from "./pages/SportDays";
 
 function App() {
   const router = createBrowserRouter([
@@ -13,35 +15,23 @@ function App() {
       children: [
         {
           path: "/school",
-          element: <AboutUs />,
+          element: <School />,
         },
         {
           path: "/sport",
-          element: <Course />,
+          element: <Sport />,
         },
         {
           path: "/sport/gallery",
-          element: <Course />,
+          element: <Gallery />,
         },
         {
           path: "/sport/news",
-          element: <Course />,
+          element: <News />,
         },
         {
           path: "/sport/sportDays",
-          element: <Course />,
-        },
-        {
-          path: "/school/gallery",
-          element: <Course />,
-        },
-        {
-          path: "/school/news",
-          element: <Course />,
-        },
-        {
-          path: "/school/course",
-          element: <Course />,
+          element: <SportDays />,
         },
         {
           path: "contact",
