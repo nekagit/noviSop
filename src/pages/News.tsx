@@ -3,6 +3,7 @@ import {
   default as KrosRTS,
   default as SrpOmlPrRotterdam,
 } from "../assets/sport0.jpg";
+import CardBox from "../components/Home/CardBox";
 import CardHolder from "../components/Home/CardHolder";
 import { ICard } from "./Home";
 
@@ -25,6 +26,7 @@ function News() {
   ];
   return (
     <div className="cardHolderWrapper">
+      <CardBox />
       {allCards.map((x) => (
         <CardHolder
           key={x.title}
