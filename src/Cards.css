@@ -142,8 +142,6 @@ button {
 input:checked + label {
     width: 100%;
 }
-
-
 }
 
 /* Media query for PC */
