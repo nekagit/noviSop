@@ -21,7 +21,7 @@
 }
 
 .card {
-    width: 80px;
+    width: 150px;
     max-width: 90%;
     background-size: cover;
     cursor: pointer;
@@ -45,21 +45,25 @@
     background: #223;
     color: white;
     border-radius: 50%;
-    width: 50px;
+    width: 88px;
+    height: 88px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin: 15px;
+    font-size: 13pt;
 }
 
 .card > .column > .description {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
     overflow: hidden;
     height: 80px;
     width: 520px;
     opacity: 0;
+    margin:auto;
     transform: translateX(30px);
     transition-delay: .3s;
     transition: all .3s ease;
@@ -67,6 +71,8 @@
 
 .description {
     color: #b0b0ba;
+    display: flex;
+    flex-direction:row;
 }
 
 
