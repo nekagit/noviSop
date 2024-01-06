@@ -3,24 +3,20 @@ import {
   default as SrpOmlPrRotterdam,
 } from "../assets/sport0.jpg";
 import CardHolder from "../components/Home/CardHolder";
-import { ICard } from "./Home";
+import { ICard } from "../interfaces/Interfaces";
 
 function Sport() {
   const allCards: ICard[] = [
     {
       title: "Srpsko Omladinsko Prijateljstvo Rotterdam",
       backgroundSrc: SrpOmlPrRotterdam,
-      color: "brown",
-      top: "",
     },
-    { title: "Kros RTS", backgroundSrc: KrosRTS, color: "blue", top: "" },
-    { title: "Sportevi", backgroundSrc: KrosRTS, color: "white", top: "" },
-    { title: "Sportski dani", backgroundSrc: KrosRTS, color: "white", top: "" },
+    { title: "Kros RTS", backgroundSrc: KrosRTS },
+    { title: "Sportevi", backgroundSrc: KrosRTS },
+    { title: "Sportski dani", backgroundSrc: KrosRTS },
     {
       title: "Pregled godina",
       backgroundSrc: KrosRTS,
-      color: "yellow",
-      top: "",
     },
   ];
   return (
@@ -30,8 +26,6 @@ function Sport() {
           key={x.title}
           title={x.title}
           backgroundSrc={x.backgroundSrc}
-          color={x.color}
-          top={x.top}
         />
       ))}
     </>

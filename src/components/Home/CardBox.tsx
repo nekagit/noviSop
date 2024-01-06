@@ -6,40 +6,117 @@ import {
   default as Sport,
   default as SportskiDani,
 } from "../../assets/school0.jpg";
-import { ICard } from "../../pages/Home";
-
+import { ICard } from "../../interfaces/Interfaces";
 
 export default function CardBox() {
   const [active, setActive] = useState(true);
-  const cards:ICard = [
+  const cards: ICard[] = [
     {
-      active: true,
       title: "School",
       htmlFor: "c1",
       backgroundSrc: School,
-      buttonCards: ["asdf", "asdf", "asdf"],
+      buttonCards: [
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+      ],
     },
+
+    // title: string;
+    //   subTitle: string;
+    //   backgroundSrc: string;
+    //   images: IImages;
+    //   form: IForm;
 
     {
       title: "Sport",
       backgroundSrc: Sport,
+      buttonCards: [
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+          form: {},
+        },
+      ],
       htmlFor: "c2",
-      buttonCards: ["asdf", "asdf", "asdf"],
-      active: false,
     },
     {
       title: "Sportski \nDani",
       htmlFor: "c3",
       backgroundSrc: SportskiDani,
-      buttonCards: ["asdf", "asdf", "asdf"],
-      active: false,
+      buttonCards: [
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+        },
+        {
+          title: "asdf",
+          subTitle: "",
+          backgroundSrc: "",
+          images: { title: "" },
+          contentCard: <></>,
+        },
+      ],
     },
     {
       title: "Pregled \nGodine",
       htmlFor: "c4",
       backgroundSrc: PregledGodine,
-      buttonCards: ["asdf", "asdf", "asdf"],
-      active: false,
+      buttonCards: [
+        { title: "asdf", contentCard: <></> },
+        { title: "asdf", contentCard: <></> },
+        { title: "asdf", contentCard: <></> },
+      ],
     },
   ];
   {

@@ -4,23 +4,23 @@ import {
   default as SrpOmlPrRotterdam,
 } from "../assets/sport0.jpg";
 import CardHolder from "../components/Home/CardHolder";
-import { ICard } from "./Home";
+import { ICard } from "../interfaces/Interfaces";
 
 function School() {
   const allCards: ICard[] = [
     {
       title: "Opste Informacije",
       backgroundSrc: Sponsori,
-      color: "red",
-      top: "",
+      htmlFor: "",
+      buttonCards: [],
     },
     {
       title: "Nastava",
       backgroundSrc: SrpOmlPrRotterdam,
-      color: "brown",
-      top: "",
+      htmlFor: "",
+      buttonCards: [],
     },
-    { title: "Kontakt", backgroundSrc: KrosRTS, color: "blue", top: "" },
+    { title: "Kontakt", backgroundSrc: KrosRTS, htmlFor: "", buttonCards: [] },
   ];
   return (
     <>
@@ -29,8 +29,6 @@ function School() {
           key={x.title}
           title={x.title}
           backgroundSrc={x.backgroundSrc}
-          color={x.color}
-          top={x.top}
         />
       ))}
     </>

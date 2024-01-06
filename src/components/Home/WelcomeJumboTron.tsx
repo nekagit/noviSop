@@ -1,4 +1,4 @@
-import { IJumboTron } from "../../pages/Home";
+import { IJumboTron } from "../../interfaces/Interfaces";
 
 function WelcomeJumboTron(props: Readonly<IJumboTron>) {
   const { title } = props;
