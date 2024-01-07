@@ -1,137 +1,13 @@
 import { useState } from "react";
-import "../../Cards.css";
-import {
-  default as PregledGodine,
-  default as School,
-  default as Sport,
-  default as SportskiDani,
-} from "../../assets/school0.jpg";
-import { ICard } from "../../interfaces/Interfaces";
+import { ICardBox } from "../../interfaces/Interfaces";
+import SlideCard from "./SlideCard";
 
-export default function CardBox() {
+export default function CardBox(props: Readonly<ICardBox>) {
+  const { cards } = props;
   const [active, setActive] = useState(true);
-  const cards: ICard[] = [
-    {
-      title: "School",
-      htmlFor: "c1",
-      backgroundSrc: School,
-      buttonCards: [
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-      ],
-    },
-
-    // title: string;
-    //   subTitle: string;
-    //   backgroundSrc: string;
-    //   images: IImages;
-    //   form: IForm;
-
-    {
-      title: "Sport",
-      backgroundSrc: Sport,
-      buttonCards: [
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-          form: {},
-        },
-      ],
-      htmlFor: "c2",
-    },
-    {
-      title: "Sportski \nDani",
-      htmlFor: "c3",
-      backgroundSrc: SportskiDani,
-      buttonCards: [
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-        },
-        {
-          title: "asdf",
-          subTitle: "",
-          backgroundSrc: "",
-          images: { title: "" },
-          contentCard: <></>,
-        },
-      ],
-    },
-    {
-      title: "Pregled \nGodine",
-      htmlFor: "c4",
-      backgroundSrc: PregledGodine,
-      buttonCards: [
-        { title: "asdf", contentCard: <></> },
-        { title: "asdf", contentCard: <></> },
-        { title: "asdf", contentCard: <></> },
-      ],
-    },
-  ];
-  {
-    /* <input type="radio" name="slide" id={x.htmlFor} />
-                <label htmlFor={x.htmlFor} className="card">
-                <div className="column">
-                <div className="icon">{x.title}</div>
-                <div className="description">
-                <h4>
-                <button className="button-30">{x.buttonName}</button>
-                </h4>
-                </div>
-                </div>
-              </label> */
-  }
+  const onSetActive = (id: string) => {
+    console.log(id);
+  };
   return (
     <>
       {active ? (
@@ -139,26 +15,7 @@ export default function CardBox() {
           <section className="wrapper">
             <div className="container">
               {cards.map((x) => (
-                <>
-                  <input type="radio" name="slide" id={x.htmlFor} />
-                  <label htmlFor={x.htmlFor} className="card">
-                    <div className="column">
-                      <div className="icon">{x.title}</div>
-                      <div className="description">
-                        {x.buttonCards.map((x) => (
-                          <h4>
-                            <button
-                              onClick={() => setActive(!active)}
-                              className="button-30"
-                            >
-                              {x}
-                            </button>
-                          </h4>
-                        ))}
-                      </div>
-                    </div>
-                  </label>
-                </>
+                <SlideCard key={x.title} card={x} onSetActive={onSetActive} />
               ))}
             </div>
           </section>
@@ -172,12 +29,12 @@ export default function CardBox() {
                 <div key={x.title} className="cardLink">
                   <div>cardlink</div>
                   {x.buttonCards.map((x) => (
-                    <h4>
+                    <h4 key={x.title}>
                       <button
                         onClick={() => setActive(!active)}
                         className="button-30"
                       >
-                        {x}
+                        {x.title}
                       </button>
                     </h4>
                   ))}

@@ -1,27 +1,46 @@
 export interface ICard {
+  active: boolean;
   title: string;
   backgroundSrc: string;
   htmlFor: string;
-  buttonCards: IButtonCard;
+  buttonCards: IButtonCard[];
+}
+
+export interface ICardBox {
+  cards: ICard[];
+}
+
+export interface ISlideCard {
+  card: ICard;
+  onSetActive: (id: string) => void;
 }
 
 export interface IButtonCard {
   title: string;
-  contentCard: IContentCard;
+  subTitle: string;
+  backgroundSrc: string;
+  images: IImages[];
+  contentCard: React.ReactNode;
 }
 
 export interface IContentCard {
   title: string;
   subTitle: string;
   backgroundSrc: string;
-  images: IImages;
-  form: IForm;
+  images: IImages[];
+  form?: IForm;
+  posts?: IPost[];
 }
 
 export interface IForm {
   selectInputs: ISelectInputs;
   textInputs: ITextInputs;
   buttons: IButton;
+}
+
+export interface IPost {
+  title: string;
+  content: string[];
 }
 
 export interface IImages {
