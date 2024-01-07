@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Home from "./pages/Home";
-import School from "./pages/School";
+import School from "./pages/School/School";
 import Sport from "./pages/Sport";
 import SportDays from "./pages/SportDays";
 import News from "./pages/index/Index";

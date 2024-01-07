@@ -15,6 +15,15 @@ export interface ISlideCard {
   onSetActive: (id: string) => void;
 }
 
+export interface ICardNavBar {
+  card: ICard;
+  onSetActive: (id: string) => void;
+}
+
+export interface IActiveCard {
+  card: ICard;
+}
+
 export interface IButtonCard {
   title: string;
   subTitle: string;
