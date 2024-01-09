@@ -8,7 +8,8 @@ export default function CardBox(props: Readonly<ICardBox>) {
   const { cards } = props;
   const [active, setActive] = useState(true);
   const onSetActive = (id: string) => {
-    
+    const newActive = cards.find(x => x.title == id)
+    // setActive(newActive)
     console.log(id);
   };
   return (
